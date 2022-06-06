@@ -1,7 +1,5 @@
 package com.maisprati.trabalhojava.model;
 
-import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -16,9 +14,9 @@ public class Cadastros {
 	private Integer idCadastro;
 	
 	private String nome;
-	private LocalDate dataNascimento;
-	private LocalDate dataCadastro;
-	private LocalDate ultimaAlteracao;
+	private String dataNascimento;
+	private String dataCadastro;
+	private String ultimaAlteracao;
 	
 	@Enumerated(EnumType.STRING)
 	private CadastroTipo tipoCadastro;
@@ -35,22 +33,22 @@ public class Cadastros {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public LocalDate getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDataNascimento(String string) {
+		this.dataNascimento = string;
 	}
-	public LocalDate getDataCadastro() {
+	public String getDataCadastro() {
 		return dataCadastro;
 	}
-	public void setDataCadastro(LocalDate dataCadastro) {
+	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-	public LocalDate getUltimaAlteracao() {
+	public String getUltimaAlteracao() {
 		return ultimaAlteracao;
 	}
-	public void setUltimaAlteracao(LocalDate ultimaAlteracao) {
+	public void setUltimaAlteracao(String ultimaAlteracao) {
 		this.ultimaAlteracao = ultimaAlteracao;
 	}
 	public CadastroTipo getTipoCadastro() {
