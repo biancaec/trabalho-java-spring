@@ -16,6 +16,14 @@ public class Telefones {
 	
 	private String telefone;
 	
+	private boolean flagAtivo;
+	
+	public boolean isFlagAtivo() {
+		return flagAtivo;
+	}
+	public void setFlagAtivo(boolean flagAtivo) {
+		this.flagAtivo = flagAtivo;
+	}
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_cadastro")
 	private Cadastros cadastro;
